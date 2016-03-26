@@ -1,4 +1,4 @@
-package com.rest.sample;
+package com.rest.multiplex.sample;
 
 import java.io.InputStream;
 
@@ -16,7 +16,7 @@ public class ImageRestService {
 	@Path("{name}")
 	@Produces("image/png")
 	public Response getImage(@PathParam("name") String name) throws InterruptedException {   
-    	Thread.sleep(2);
+    	//Thread.sleep(2);
     	InputStream in = this.getClass().getClassLoader().getResourceAsStream(name);
 		ResponseBuilder response = Response.ok((Object) in);
 		return response.build();

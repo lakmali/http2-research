@@ -13,9 +13,8 @@ int count = Integer.parseInt(request.getParameter("count"));
 String imageName = "icon99.png";
 %>
 <body>
-
 				<%for(int i = 0; i < count; i++) { %>
-	                        <img width="20px" height="20px" src="https://localhost:8443/rest-service-0.0.1/service/images/<%=imageName%>?q=<%=i %>" alt="">        
+	                        <img width="20px" height="20px" src="https://192.168.1.8:8443/rest-service-0.0.1/service/images/<%=imageName%>?q=<%=i %>" alt="">        
 				<%} %>
 
 </body>
